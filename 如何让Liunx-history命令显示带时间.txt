@@ -1,0 +1,14 @@
+
+在生产环境中，每一步都要小心，对于每一个命令，我们都要知道是干什么的，什么时间。
+记录下操作的时间可以减少一些不必要的麻烦。
+linux中设置histtory带时间是很容易的
+首先先编辑bashrc文件
+
+vim /etc/bashrc，在文件尾部加入以下3行
+HISTFILESIZE=2000
+HISTSIZE=2000
+HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S: "
+
+保存退出后，执行命令 source /etc/bashrc
+
+就完成了
